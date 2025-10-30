@@ -1,7 +1,6 @@
 codify = input().strip()
-candidates = []
+best_candidate = []
 elec = []
-
 with open("arquivo.csv", "r", encoding=codify) as f:
  data = f.readlines()
  except FileNotFoundError:
