@@ -1,8 +1,9 @@
 from collections import Counter
+codify = input("Digite sua codificação:")
 elec = []
 candidates = []
 try:
- with open("arquivo.csv", "r", encoding="utf-8") as f:
+ with open("arquivo.csv", "r", encoding=codify) as f:
   data = f.readlines()
   for linha in data[1:]:
    elec = linha.split(";")
