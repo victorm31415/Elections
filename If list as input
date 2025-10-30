@@ -1,2 +1,3 @@
-x = input()
+arq = open("eleições.csv", "e", encoding="latin1")
+
 
