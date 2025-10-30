@@ -2,7 +2,7 @@ from collections import Counter
 elec = []
 candidates = []
 try:
- with open("arquivo.csv", "r", encoding="utf=8") as f:
+ with open("arquivo.csv", "r", encoding="utf-8") as f:
   data = f.readlines()
   for linha in data[1:]:
    elec = linha.split(";")
