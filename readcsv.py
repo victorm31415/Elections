@@ -40,7 +40,7 @@ votos = {
  "C9": el9
 }
 most_voted = max(votos, key=votos.get)
-print(f"O candidato mais votado foi {mais_votado} com {votos[mais_votado]} votos.")
+print(f"O candidato mais votado foi {most_voted} com {votos[most_voted]} votos.")
 except FileNotFoundError:
  print("arquivo.csv não encontrado")
  exit()
