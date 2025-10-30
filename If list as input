@@ -1,3 +1,13 @@
 arq = open("eleições.csv", "r", encoding="latin1")
+votes = []
+elements = []
+numbs = arq.readlines()
+for i in numbs:
+  elements = i.split(";")
+  votes.append(elements[2])
+votes_int = [int(item) for item in votes]
+result = sum(votes_int)
+print(result)
+arq.close()
 
 
