@@ -8,7 +8,7 @@ try:
   for linha in data[1:]:
    elec = linha.split(";")
    if len(elec) >= 2:
-    candidate = elec[1].strip()
+    candidate = elec[1].strip().lower()
     candidates.append(candidate)
 except FileNotFoundError:
  print("arquivo.csv não encontrado")
