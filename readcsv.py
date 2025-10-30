@@ -9,7 +9,7 @@ try:
    elec = linha.split(";")
    if len(elec) >= 2:
     candidate = elec[1].strip()
-    candidates = candidates.append(candidate)
+    candidates.append(candidate)
 except FileNotFoundError:
  print("arquivo.csv não encontrado")
  exit()
