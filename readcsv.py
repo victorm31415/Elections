@@ -1,15 +1,15 @@
-from coleciona import Counter
+from collections import Counter
 codify = input().strip()
 elec = []
 candidates = []
 try:
  with open("arquivo.csv", "r", encoding=codify) as f:
   data = f.readlines()
-  for linha in data[1:]
+  for linha in data[1:]:
    elec = linha.split(";")
    if len(elec) >= 2:
     candidate = elec[1].strip()
-    candidates = append(candidate)
+    candidates = candidates.append(candidate)
 except FileNotFoundError:
  print("arquivo.csv não encontrado")
  exit()
@@ -23,7 +23,7 @@ if votes:
 else:
  print("Nenhum voto válido encontrado.")
 print("\nResultado completo:")
-for candidate, total in votos.most_common():
+for candidate, total in votes.most_common():
  print(f"{candidate}: {total} votos")
 
   
