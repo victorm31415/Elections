@@ -35,7 +35,7 @@ except FileNotFoundError:
  print("arquivo.csv não encontrado")
  exit()
 except UnicodeDecodeError:
- print("Erro ao codificar arquivo com {codify}")
+ print(f"Erro ao codificar arquivo com {codify}")
  exit()
 votos = {
  "C1": el1,
@@ -45,8 +45,7 @@ votos = {
  "C5": el5,
  "C6": el6,
  "C7": el7,
- "C8": el8,
- "C9": el9
+ "C8": el8
 }
 most_voted = max(votos, key=votos.get)
 print(f"O candidato mais votado foi {most_voted} com {votos[most_voted]} votos.")
