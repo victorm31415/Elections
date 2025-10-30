@@ -1,5 +1,5 @@
 from collections import Counter
-codify = input().strip()
+codify = input("Escreva qual a sua codificação (ex: utf-8)").strip()
 elec = []
 candidates = []
 try:
