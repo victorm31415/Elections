@@ -16,12 +16,15 @@ except FileNotFoundError:
 except UnicodeDecodeError:
  print(f"Erro ao codificar arquivo com {codify}")
  exit()
-votos = Counter(candidates)
-if votos:
- most_voted = max(votos, key=votos.get)
- print(f"O candidato mais votado foi {mais_votado} com {votos[mais_votado]} votos.")
+votes = Counter(candidates)
+if votes:
+ most_voted = max(votes, key=votes.get)
+ print(f"O candidato mais votado foi {most_voted} com {votes[most_voted]} votos.")
 else:
  print("Nenhum voto válido encontrado.")
+print("\nResultado completo:")
+for candidate, total in votos.most_common():
+ print(f"{candidate}: {total} votos")
 
   
   
