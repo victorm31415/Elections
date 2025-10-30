@@ -28,6 +28,12 @@ with open("arquivo.csv", "r", encoding=codify) as f:
    el7 += 1 
   if elec[1] == "C8":
    el8 += 1
+except FileNotFoundError:
+ print("arquivo.csv não encontrado")
+ exit()
+except UnicodeDecodeError:
+ print("Erro ao codificar arquivo com {codify}")
+ exit()
 votos = {
  "C1": el1,
  "C2": el2,
@@ -41,13 +47,7 @@ votos = {
 }
 most_voted = max(votos, key=votos.get)
 print(f"O candidato mais votado foi {most_voted} com {votos[most_voted]} votos.")
-except FileNotFoundError:
- print("arquivo.csv não encontrado")
- exit()
-except UnicodeDecodeError:
- print("Erro ao codificar arquivo com {codify}")
- exit()
- 
+
 
   
   
