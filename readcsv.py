@@ -12,7 +12,7 @@ with open("arquivo.csv", "r", encoding=codify) as f:
  data = f.readlines()
  for linha in data:
   elec = linha.split(";")
-  If len(ele) < 2:
+  if len(ele) < 2:
    continue
   if elec[1] == "C1":
    el1 += 1
