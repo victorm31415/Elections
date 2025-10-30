@@ -25,7 +25,5 @@ else:
 print("\nResultado completo:")
 for candidate, total in votes.most_common():
  print(f"{candidate}: {total} votos")
-
-  
   
  
