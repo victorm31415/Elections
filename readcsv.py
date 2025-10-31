@@ -14,7 +14,7 @@ except FileNotFoundError:
  print("arquivo.csv não encontrado")
  exit()
 except UnicodeDecodeError:
- print(f"Erro ao codificar arquivo com {codify}")
+ print(f"Erro ao decodificar arquivo com {codify}")
  exit()
 votes = Counter(candidates)
 if votes:
