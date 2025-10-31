@@ -18,8 +18,10 @@ except UnicodeDecodeError:
 for city, candidates in votes_per_city.items():
   total_votes = len(candidates)
   counter = Counter(candidates)
-for candidate, count in counter.items():
-    percentage = (count / total_votes) * 100
-    print(candidate, f"{percentage:.2f}%")
+  print(f"Cidade: {city}")
+  for candidate, count in counter.items():
+      percentage = (count / total_votes) * 100
+      print(candidate, f"{percentage:.2f}%")
+  print("-"*30)
 
 
