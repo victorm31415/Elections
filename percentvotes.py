@@ -12,5 +12,6 @@ try:
     candidate = elec[1].strip().upper()
     votes_per_city[city].append(candidate)
 except FileNotFoundError:
- print("Não foi possível encontrar o arquivo")
-except 
+ print(f"Não foi possível encontrar o arquivo")
+except UnicodeDecodeError:
+ print(f"Erro ao decodificar arquivo com {codify}")
