@@ -19,7 +19,7 @@ except UnicodeDecodeError:
   print(f"Erro ao decodificar arquivo com {codify}")
   sys.exit()
 arq_final = "resultado.csv"
-with open("resultado.csv", "w",encoding="utf-8") as out:
+with open("resultado.csv", "w", newline="",encoding="utf-8") as out:
   dados_finais = csv.writer(out, delimiter=";")
   dados_finais.writerow(["Cidade","Candidato","Porcentagem"])
   
