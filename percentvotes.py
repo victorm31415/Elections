@@ -21,7 +21,7 @@ except UnicodeDecodeError:
 arq_final = "resultado.csv"
 with open("resultado.csv", "w",encoding="utf-8") as out:
   dados_finais = csv.writer(out, delimiter=";")
-   dados_finais.writerow(["Cidade","Candidato","Porcent agem"])
+  dados_finais.writerow(["Cidade","Candidato","Porcent agem"])
   
 for city, candidates in votes_per_city.items():
   total_votes = len(candidates)
