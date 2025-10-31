@@ -30,6 +30,8 @@ with open("resultado.csv", "w", newline="",encoding="utf-8") as out:
     for candidate, count in counter.most_common():
         percentage = (count / total_votes) * 100
         print(candidate, f"{percentage:.2f}%")
+        dados_finais.writerow([city, candidate, f"{percentage:.2f}%"])
+
     print("-"*30)
 print("Resultado gravado no novo arquivo com sucesso.")
 
