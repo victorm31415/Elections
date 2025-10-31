@@ -1,4 +1,5 @@
 import csv
+import sys
 from collections import defaultdict, Counter
 codify = input("Digite a codificação:")
 votes_per_city = defaultdict(list)
@@ -13,13 +14,15 @@ try:
      votes_per_city[city].append(candidate)
 except FileNotFoundError:
   print(f"Não foi possível encontrar o arquivo")
+  sys.exit()
 except UnicodeDecodeError:
   print(f"Erro ao decodificar arquivo com {codify}")
+  sys.exit()
 for city, candidates in votes_per_city.items():
   total_votes = len(candidates)
   counter = Counter(candidates)
   print(f"Cidade: {city}")
-  for candidate, count in counter.items():
+  for candidate, count in counter.most_common():
       percentage = (count / total_votes) * 100
       print(candidate, f"{percentage:.2f}%")
   print("-"*30)
