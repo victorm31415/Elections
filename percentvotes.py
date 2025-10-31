@@ -23,13 +23,13 @@ with open("resultado.csv", "w",encoding="utf-8") as out:
   dados_finais = csv.writer(out, delimiter=";")
   dados_finais.writerow(["Cidade","Candidato","Porcentagem"])
   
-for city, candidates in votes_per_city.items():
-  total_votes = len(candidates)
-  counter = Counter(candidates)
-  print(f"Cidade: {city}")
-  for candidate, count in counter.most_common():
-      percentage = (count / total_votes) * 100
-      print(candidate, f"{percentage:.2f}%")
-  print("-"*30)
+  for city, candidates in votes_per_city.items():
+    total_votes = len(candidates)
+    counter = Counter(candidates)
+    print(f"Cidade: {city}")
+    for candidate, count in counter.most_common():
+        percentage = (count / total_votes) * 100
+        print(candidate, f"{percentage:.2f}%")
+    print("-"*30)
 
 
