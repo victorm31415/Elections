@@ -31,5 +31,6 @@ with open("resultado.csv", "w",encoding="utf-8") as out:
         percentage = (count / total_votes) * 100
         print(candidate, f"{percentage:.2f}%")
     print("-"*30)
+print("Resultado gravado no novo arquivo com sucesso.")
 
 
