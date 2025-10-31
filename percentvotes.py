@@ -20,6 +20,6 @@ for city, candidates in votes_per_city.items():
   counter = Counter(candidates)
 for candidate, count in counter.items():
     percentage = (count / total_votes) * 100
-
+    print(candidate, f"{percentage:.2f}%")
 
 
